@@ -1,0 +1,61 @@
+<template name="layout">
+	<div class="container">
+		<div class="row">
+			<div class="sidebar fixed hidden-xs">
+				{{> sidebar }}
+			</div>
+			<div class="sidebar no-fixed visible-xs">
+				{{> sidebar }}
+			</div>
+			<div class="col-sm-9 col-sm-offset-3">
+				{{> yield }}
+				<br><br>
+			</div>
+		</div>
+	</div>
+</template>
+<template name="sidebar">
+	<div>
+		<a class="{{isActiveRoute regex='intro'}}" href="{{ pathFor 'intro' }}">Introduction</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='entities'}}" href="{{ pathFor 'entities' }}">Entities</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='dictionary'}}" href="{{ pathFor 'dictionary' }}">Dictionary</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='attributes'}}" href="{{ pathFor 'attributes' }}">Attributes</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='users'}}" href="{{ pathFor 'users' }}">Users</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='configuration'}}" href="{{ pathFor 'configuration' }}">Configuration</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='languages'}}" href="{{ pathFor 'languages' }}">Languages</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='api'}}" href="{{ pathFor 'api' }}">Api</a>
+	</div>
+	<div class="divider"></div>
+	<div>
+		<a class="{{isActiveRoute regex='pages'}}" href="{{ pathFor 'pages' }}">Pages</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='relationships'}}" href="{{ pathFor 'relationships' }}">Relationships</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='filesystem'}}" href="{{ pathFor 'filesystem' }}">Filesystem</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='file_attribute'}}" href="{{ pathFor 'file_attribute' }}">File Attribute</a>
+	</div>
+	<div>
+		<a class="{{isActiveRoute regex='text_editors'}}" href="{{ pathFor 'text_editors' }}">Text Editors</a>
+	</div>
+</template>
+<template name="loading">
+	<p class="loading">Loading...</p>
+</template>

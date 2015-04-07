@@ -1,0 +1,105 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-top: 40px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.loading {
+  margin-top: 40px;
+  color: #aaa;
+}
+
+.sidebar.fixed {
+  position: fixed;
+  margin-top: 40px;
+}
+
+.sidebar.no-fixed {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+.sidebar div {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #333;
+  font-size: 20px;
+}
+
+.sidebar a.active {
+  text-decoration: underline;
+}
+
+.divider {
+  height: 10px;
+}
+
+.title img {
+	width: 60px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
+.sub {
+  text-align: center;
+	color: #999;
+}
+
+.button {
+  margin-top: 30px;
+  text-align: center;
+}
+.button a {
+  color: #333;
+  font-size: 20px;
+}
+
+.button a:hover {
+  text-decoration: none;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 0;
+  line-height: 20px;
+}
+
+pre {
+    overflow-x: auto;
+}
+pre code {
+    overflow-wrap: normal;
+    white-space: pre;
+}
+
+.link {
+  text-align: center;
+	margin-top: 30px;
+	text-align: center;
+}
