@@ -1,0 +1,134 @@
+.docs {
+
+  .header {
+    font-weight: 300; 
+  }
+
+  header, main, footer {
+    padding-left: 240px; 
+  }
+  @media only screen and (max-width : 992px) {
+    header, main, footer {
+      padding-left: 0;
+    }
+  }
+
+  ul.side-nav.fixed li.logo {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #ddd; 
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  #logo-container {
+    height: 57px;
+    margin-bottom: 32px; 
+    img {
+      height: 70px;
+    }
+  }
+  
+  nav.top-nav {
+    height: 122px;
+    box-shadow: none; 
+
+    a.page-title {
+      line-height: 122px;
+      font-size: 48px; 
+    }
+  }
+
+  a.button-collapse.top-nav {
+    position: absolute;
+    text-align: center;
+    height: 48px;
+    width: 48px;
+    left: 7.5%;
+    top: 0;
+    float: none;
+    margin-left: 1.5rem;
+    color: #fff;
+    font-size: 32px;
+    z-index: 2; 
+
+    &.full {
+      line-height: 122px; 
+    }
+  }
+
+  @media only screen and (max-width : 600px) {
+    a.button-collapse.top-nav {
+      left: 5%; 
+    } 
+  }
+
+  @media only screen and (max-width : 992px) {
+    nav .nav-wrapper {
+      text-align: center; 
+      a.page-title {
+        font-size: 36px; 
+      } 
+    }
+  }
+
+  @media only screen and (min-width : 993px) {
+    .container {
+      width: 85%; 
+    } 
+  }
+
+  ul.side-nav.fixed {
+    overflow: hidden; 
+    li {
+      line-height: 44px; 
+      a {
+        font-size: 13px;
+        line-height: 44px;
+        height: 44px; 
+
+        &.collapsible-header {
+          margin: 0;
+        }
+      }
+    }
+    li:hover {
+      background-color: rgba(0, 0, 0, 0.05); 
+    }
+
+    li.active {
+      background-color: rgba(0, 0, 0, 0.1); 
+      a {
+        color: #444;
+      }
+    }
+
+    ul.collapsible-accordion {
+      background-color: #FFF; 
+
+      li {
+        a {
+          margin: 0;
+          padding: 0 1rem 0 2rem;
+        }
+      }
+    }
+
+    &:hover {
+      overflow-y: auto; 
+    }
+  }
+
+
+  .content {
+    min-height: 300px;
+
+    h1 {
+      color: color('blue-grey', 'darken-2');
+      font-size: 45px;
+    }
+
+  }
+}

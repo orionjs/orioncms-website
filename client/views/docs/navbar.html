@@ -1,0 +1,36 @@
+<template name="docsNavbar">
+  <header>
+    <div class="container">
+      <a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle">
+        <i class="mdi-navigation-menu"></i>
+      </a>
+    </div>
+    <ul id="nav-mobile" class="side-nav fixed collapsible" data-collapsible="accordion">
+      <li class="logo">
+        <a id="logo-container" href="{{ pathFor 'home' }}" class="brand-logo">
+          <img src="http://i.imgur.com/6PeLvIG.png">
+        </a>
+      </li>
+      {{# each links }}
+        {{# if childs }}
+          <li class="no-padding">
+            <a class="collapsible-header waves-effect">{{ title }}</a>
+            <div class="collapsible-body">
+              <ul class="collapsible collapsible-accordion">
+                {{# each childs }}
+                  <li class="{{ isActivePath regex=getPath  }}">
+                    <a href="{{ pathFor 'docs.show' }}" class="waves-effect">{{ title }}</a>
+                  </li>
+                {{/ each }}
+              </ul>
+            </div>
+          </li>
+        {{ else }}
+          <li class="no-padding {{ isActivePath regex=getPath }}">
+             <a href="{{ pathFor 'docs.show' }}" class="collapsible-header waves-effect">{{ title }}</a>
+          </li>
+        {{/ if }}
+      {{/ each }}
+    </ul>
+  </header>
+</template>

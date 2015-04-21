@@ -1,1 +1,0 @@
-Tutorials = new Mongo.Collection('tutorials');

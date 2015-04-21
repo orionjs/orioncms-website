@@ -1,1 +1,0 @@
-Docs = new Mongo.Collection('docs');

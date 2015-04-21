@@ -10,7 +10,11 @@
               <p>By <a href="http://github.com/{{ authorGithub }}">{{ author }}</a></p>
               <div class="divider"></div>
               <div class="content">
-                {{# markdown }}{{ content }}{{/ markdown }}
+                {{# if content }}
+                  {{# markdown }}{{ content }}{{/ markdown }}
+                {{ else }}
+                  {{> loading }}
+                {{/ if }}
               </div>
               <div class="divider"></div>
               <div class="">

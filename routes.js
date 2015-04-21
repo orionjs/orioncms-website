@@ -13,10 +13,11 @@ Router.route('/tutorials/:slug', {
   name: 'tutorials.show',
 })
 
-Router.route('/docs', {
-  layoutTemplate: 'layout',
-  name: 'docs.index',
+Router.route('/docs/:slug', {
+  layoutTemplate: 'docsLayout',
+  name: 'docs.show',
 })
+
 
 
 Router.route('/tutorials-hook', function () {
