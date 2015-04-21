@@ -1,0 +1,23 @@
+<template name="tutorialsIndex">
+  <div class="container">
+    <div class="row masonry">
+      {{# each tutorials }} 
+        {{> tutorialsIndexItem }}
+      {{/ each }}
+    </div>
+  </div>
+</template>
+
+<template name="tutorialsIndexItem">
+  <div class="col s12 m6">
+    <div class="card">
+      <div class="card-image">
+        <img src="{{ smallImage }}">
+        <span class="card-title">{{ title }}</span>
+      </div>
+      <div class="card-content">
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </div>
+</template>
