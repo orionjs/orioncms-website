@@ -13,8 +13,20 @@ Router.route('/tutorials/:slug', {
   name: 'tutorials.show',
 })
 
+Router.route('/docs', {
+  layoutTemplate: 'layout',
+  name: 'docs.index',
+})
+
+
 Router.route('/tutorials-hook', function () {
-  fetchTutorials();
   var res = this.response;
   res.end('Tutorials updated\n');
+  fetchTutorials();
+}, {where: 'server'});
+
+Router.route('/docs-hook', function () {
+  var res = this.response;
+  res.end('Documentation updated\n');
+  fetchDocumentations();
 }, {where: 'server'});
