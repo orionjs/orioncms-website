@@ -12,4 +12,4 @@ Meteor.methods({
 });
 
 
-Meteor.call('fetchTutorials');
+//Meteor.call('fetchTutorials');

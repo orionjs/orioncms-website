@@ -1,23 +1,28 @@
 <template name="tutorialsIndex">
-  <div class="container">
-    <div class="row masonry">
-      {{# each tutorials }} 
-        {{> tutorialsIndexItem }}
-      {{/ each }}
+  <div class="section">
+    <div class="container">
+      <div class="row masonry">
+        {{# each tutorials }} 
+          {{> tutorialsIndexItem }}
+        {{/ each }}
+      </div>
     </div>
   </div>
+  <br style="clear:both">
 </template>
 
 <template name="tutorialsIndexItem">
   <div class="col s12 m6">
     <div class="card">
-      <div class="card-image">
-        <img src="{{ smallImage }}">
-        <span class="card-title">{{ title }}</span>
-      </div>
-      <div class="card-content">
-        <p>{{ description }}</p>
-      </div>
+      <a href="{{ pathFor 'tutorials.show' }}">
+        <div class="card-image">
+          <img src="{{ smallImage }}">
+          <span class="card-title">{{ title }}</span>
+        </div>
+        <div class="card-content black-text">
+          <p>{{ description }}</p>
+        </div>
+      </a>
     </div>
   </div>
 </template>

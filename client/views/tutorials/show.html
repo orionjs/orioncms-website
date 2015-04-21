@@ -1,0 +1,29 @@
+<template name="tutorialsShow">
+  <div class="tutorials-show grey lighten-5">
+    {{# with tutorial }}
+      <div class="image-container" style="background-image: url({{ bigImage }});"></div>
+      <div class="section">
+        <div class="container">
+          <div class="z-depth-1 white">
+            <article>
+              <h1 class="title grey-text text-darken-3">{{ title }}</h1>
+              <p>By <a href="http://github.com/{{ authorGithub }}">{{ author }}</a></p>
+              <div class="divider"></div>
+              <div class="content">
+                {{# markdown }}{{ content }}{{/ markdown }}
+              </div>
+              <div class="divider"></div>
+              <div class="">
+                <p class="grey-text">
+                  Contribute to this or other tutorials on 
+                  <a href="http://github.com/orionjs/tutorials">Github</a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    {{/ with }}
+    <br><br>
+  </div>
+</template>

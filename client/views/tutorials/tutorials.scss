@@ -1,0 +1,59 @@
+.tutorials-show {
+  .image-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    background-size: cover; 
+    background-position: center;
+    position:relative;
+  }
+
+  .section {
+    margin-top: -8%;
+    z-index: 10;
+    position: relative;
+
+    article {
+      padding: 15px;
+
+      .title {
+        font-size: 30px;
+        margin: 0;
+      }
+
+      .content {
+
+        h1 {
+          font-size: 30px;
+          margin-bottom: 0;
+        }
+
+        h2 {
+          font-size: 28px;
+          margin-bottom: 0;
+        }
+
+        h3 {
+          font-size: 27px;
+          margin-bottom: 0;
+        }
+
+        h4 {
+          font-size: 25px;
+          margin-bottom: 0;
+        }
+
+        code {
+          background: color('grey', 'lighten-4');
+          border-radius: 3px;
+          padding: 0 5px;
+        }
+
+        code.hljs {
+          padding: 5px;
+        }
+
+      }
+    }
+  }
+}
