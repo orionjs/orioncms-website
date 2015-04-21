@@ -49,8 +49,8 @@
     left: 7.5%;
     top: 0;
     float: none;
-    margin-left: 1.5rem;
-    color: #fff;
+    margin-left: 1rem;
+    color: color('blue-grey', 'darken-2');
     font-size: 32px;
     z-index: 2; 
 
@@ -61,8 +61,8 @@
 
   @media only screen and (max-width : 600px) {
     a.button-collapse.top-nav {
-      left: 5%; 
-    } 
+      margin-left: 0;
+    }
   }
 
   @media only screen and (max-width : 992px) {

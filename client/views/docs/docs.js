@@ -3,6 +3,7 @@ Template.docsLayout.onRendered(function() {
 })
 
 Template.docsNavbar.onRendered(function() {
+  $('.button-collapse').sideNav();
   this.autorun(function() {
     Options.get('doclinks');
     Tracker.afterFlush(function () {
@@ -10,6 +11,12 @@ Template.docsNavbar.onRendered(function() {
     });
   })
 })
+
+Template.docsNavbar.events({
+  'click a:not(.collapsible-header)': function () {
+    $('.button-collapse').sideNav('hide');
+  }
+});
 
 Template.docsNavbar.helpers({
   links: function () {
