@@ -22,8 +22,10 @@ Template.docsNavbar.helpers({
 });
 
 Template.docsShow.onRendered(function() {
-  var slug = Router.current().params.slug;
-  Docs.syncItem(slug);
+  this.autorun(function() {
+    var slug = Router.current().params.slug;
+    Docs.syncItem(slug);
+  })
 })
 
 Template.docsShow.helpers({
