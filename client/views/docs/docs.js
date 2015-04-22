@@ -13,7 +13,7 @@ Template.docsNavbar.onRendered(function() {
 })
 
 Template.docsNavbar.events({
-  'click a:not(.collapsible-header)': function () {
+  'click a:not(.is-collapsible)': function () {
     $('.button-collapse').sideNav('hide');
   }
 });
@@ -22,9 +22,8 @@ Template.docsNavbar.helpers({
   links: function () {
     return Options.get('doclinks');
   },
-  getPath: function() {
-    var route = Router.path('docs.show', this);
-    return route;
+  isActive: function() {
+    return Router.current().location.get().path == Router.path('docs.show', this) ? 'active' : '';
   }
 });
 

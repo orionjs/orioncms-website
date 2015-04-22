@@ -126,8 +126,23 @@
     min-height: 300px;
 
     h1 {
-      color: color('blue-grey', 'darken-2');
-      font-size: 45px;
+      font-size: 42px;
+    }
+    h2 {
+      font-size: 36px;
+    }
+    h3 {
+      font-size: 30px;
+    }
+    h4 {
+      font-size: 22px;
+    }
+
+    ul {
+      padding-left: 25px;
+      li {
+        list-style-type: disc;
+      }
     }
 
   }

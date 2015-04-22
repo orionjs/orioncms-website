@@ -4,12 +4,21 @@
       Orion
     </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="{{ pathFor 'tutorials.index' }}">Tutorials</a></li>
-        <li><a href="{{ pathFor 'docs.show' slug='introduction' }}">Documentation</a></li>
+        <li class="{{ isActiveRoute regex='tutorials' }}">
+          <a href="{{ pathFor 'tutorials.index' }}">Tutorials</a>
+        </li>
+        <li class="{{ isActiveRoute regex='docs' }}">
+          <a href="{{ pathFor 'docs.show' slug='introduction' }}">Documentation</a>
+        </li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="{{ pathFor 'docs.show' slug='introduction' }}">Documentation</a></li>
+        <li class="{{ isActiveRoute regex='tutorials' }}">
+          <a href="{{ pathFor 'tutorials.index' }}">Tutorials</a>
+        </li>
+        <li class="{{ isActiveRoute regex='docs' }}">
+          <a href="{{ pathFor 'docs.show' slug='introduction' }}">Documentation</a>
+        </li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
