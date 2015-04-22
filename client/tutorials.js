@@ -1,4 +1,4 @@
-Tutorials = new Ground.Collection(null);
+Tutorials = new Ground.Collection('tutorials', { connection: null });
 
 Tutorials.sync = function() {
   var self = this;
