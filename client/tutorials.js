@@ -1,4 +1,4 @@
-Tutorials = new Mongo.Collection(null);
+Tutorials = new Ground.Collection(null);
 
 Tutorials.sync = function() {
   var self = this;
