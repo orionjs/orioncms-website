@@ -1,4 +1,4 @@
-Docs = new Ground.Collection('docs', { connection: null });
+Docs = new Mongo.Collection(null);
 Docs.didSync = false;
 Options.init('doclinks');
 
