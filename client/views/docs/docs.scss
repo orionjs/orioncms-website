@@ -140,8 +140,16 @@
 
     ul {
       padding-left: 25px;
-      li {
-        list-style-type: disc;
+      list-style-type: none;
+
+      > li {
+        margin-bottom: 5px;
+      }
+
+      > li:before {
+        content: "–"; /* en dash here */
+        position: absolute;
+        margin-left: -1.1em; 
       }
     }
 
