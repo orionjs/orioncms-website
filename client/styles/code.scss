@@ -1,0 +1,21 @@
+code {
+  padding: .5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 90%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 0;
+  line-height: 20px;
+  padding: 9.5px;
+}
+
+pre, code {
+  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+}
+
