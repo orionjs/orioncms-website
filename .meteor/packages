@@ -10,8 +10,9 @@ markdown
 simple:highlight.js
 zimme:iron-router-active
 spiderable
-fourseven:scss
+materialize:materialize
 sjors:meteor-masonry
 iamkevingreen:imagesloaded
 nicolaslopezj:options
 ground:db
+fourseven:scss

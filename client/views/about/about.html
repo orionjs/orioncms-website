@@ -1,0 +1,60 @@
+<template name="about">
+  <div class="container about">
+  
+    <h3 class="center-align">About</h3><br>
+
+    <p>
+      Orion for Meteor is a commercially supported open-source project that provides the essentials of building true enterprise cross platform apps that are secure, performant, scalable and actively deployed in the field.
+    </p>
+
+    <p>
+      Initially Orion was made by Nicolás López to help him create simple websites faster.
+      As time went on, people started to use Orion for more complex proyects.
+      Now Orion it's a advanced framework that help Meteor developers create any kind of application in a fraction of the time.
+    </p>
+
+    <br>
+    <h4 class="center-align">Contributors</h4>
+    <br>
+    <div class="contributors">
+      <div class="row">
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s3"><a class="active" href="#contributors_core">Orion</a></li>
+            <li class="tab col s3"><a href="#contributors_docs">Docs</a></li>
+            <li class="tab col s3"><a href="#contributors_tutorial">Tutorials</a></li>
+            <li class="tab col s3"><a href="#contributors_examples">Examples</a></li>
+          </ul>
+        </div>
+        <div id="contributors_core" class="col s12">{{> contribution items=coreContribution }}</div>
+        <div id="contributors_docs" class="col s12">{{> contribution items=docsContribution }}</div>
+        <div id="contributors_tutorial" class="col s12">{{> contribution items=tutorialsContribution }}</div>
+        <div id="contributors_examples" class="col s12">{{> contribution items=examplesContribution }}</div>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<template name="contribution">
+  <br>
+  <ul class="collection">
+    {{# each items }}
+      <li class="collection-item avatar">
+        <a href="{{ author.html_url }}" target="_BLANK" class="grey-text">
+          <img src="{{ author.avatar_url }}" alt="{{ author.login }}" class="circle">
+        </a>
+        <span class="title">
+          <a href="{{ author.html_url }}" target="_BLANK" class="grey-text text-darken-3">
+            {{ author.login }}
+          </a>
+        </span>
+        <p>{{ getCommits }}</p>
+        <p>
+          <span class="green-text">{{ format getAdditions }} ++ </span>
+          <span class="red-text">{{ format getDeletes }} --</span>
+        </p>
+      </li>
+    {{/ each }}
+  </ul>
+</template>

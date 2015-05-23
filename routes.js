@@ -13,6 +13,11 @@ Router.route('/tutorials/:slug', {
   name: 'tutorials.show',
 })
 
+Router.route('/about', {
+  layoutTemplate: 'layout',
+  name: 'about',
+})
+
 Router.route('/docs/:slug', {
   layoutTemplate: 'docsLayout',
   name: 'docs.show',
