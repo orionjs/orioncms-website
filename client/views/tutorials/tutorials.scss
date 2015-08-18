@@ -3,7 +3,7 @@
     min-height: 380px;
     line-height: 0;
     height: auto;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     position:relative;
   }
@@ -43,6 +43,12 @@
           margin-bottom: 0;
         }
 
+        ul {
+          padding-left: 1em;
+          li {
+            list-style-type: disc;
+          }
+        }
       }
     }
   }
