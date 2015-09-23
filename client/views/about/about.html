@@ -1,6 +1,6 @@
 <template name="about">
   <div class="container about">
-  
+
     <h3 class="center-align">About</h3><br>
 
     <p>
@@ -79,13 +79,11 @@
         <div class="col s12">
           <ul class="tabs">
             <li class="tab col s3"><a class="active" href="#contributors_core">Orion</a></li>
-            <li class="tab col s3"><a href="#contributors_docs">Docs</a></li>
             <li class="tab col s3"><a href="#contributors_tutorial">Tutorials</a></li>
             <li class="tab col s3"><a href="#contributors_examples">Examples</a></li>
           </ul>
         </div>
         <div id="contributors_core" class="col s12">{{> contribution items=coreContribution }}</div>
-        <div id="contributors_docs" class="col s12">{{> contribution items=docsContribution }}</div>
         <div id="contributors_tutorial" class="col s12">{{> contribution items=tutorialsContribution }}</div>
         <div id="contributors_examples" class="col s12">{{> contribution items=examplesContribution }}</div>
       </div>

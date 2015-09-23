@@ -6,12 +6,6 @@ Template.about.onRendered(function() {
     }
   });
 
-  HTTP.get('https://api.github.com/repos/orionjs/documentation/stats/contributors', function(error, response) {
-    if (!error) {
-      Session.set('contributors_docs', response.data.reverse());
-    }
-  });
-
   HTTP.get('https://api.github.com/repos/orionjs/tutorials/stats/contributors', function(error, response) {
     if (!error) {
       Session.set('contributors_tutorials', response.data.reverse());
